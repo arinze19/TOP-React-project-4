@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../../styles/pages/home-page.css";
 
 function homePage() {
@@ -13,7 +14,9 @@ function homePage() {
             Peep into comfort by shopping our eco-friendly shoes made from
             cotton and wool and built for the total comfort of your feet.
           </p>
-          <button className="btn">Shop Shoes</button>
+          <Link to="/products">
+            <button className="btn">Shop Shoes</button>
+          </Link>
         </div>
 
         <div className="hero-item">
@@ -26,7 +29,9 @@ function homePage() {
             emission free N12 face-mask which fits effortlessly on your face.
             guaranteed to keep you safe from the COVID all day long
           </p>
-          <button className="btn">Shop Masks</button>
+          <Link to="/products">
+            <button className="btn">Shop Masks</button>
+          </Link>
         </div>
       </div>
 

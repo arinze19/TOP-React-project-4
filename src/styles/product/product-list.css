@@ -1,0 +1,12 @@
+.products-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    max-width: 1440px;
+    margin: 3rem auto;
+}
+
+.product-list-container h1 {
+    text-align: center;
+    margin: 8rem 0 0;
+}
