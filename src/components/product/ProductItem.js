@@ -1,19 +1,21 @@
+import { Link } from "react-router-dom";
 import "../../styles/product/product-item.css";
 
 function ProductItem({ product }) {
   return (
-    <div className="product-item-container">
-      <div className="product-item-container__imgBg">
-        <img src={product.imgs[0]} alt={product.name} />
-      </div>
+    <Link to={`/product/${product.id}`}>
+      <div className="product-item-container">
+        <div className="product-item-container__imgBg">
+          <img src={product.imgs[0].url} alt={product.name} />
+        </div>
 
-      <div className="product-item-container__info">
-        <p>${product.price}</p>
-        <p>{product.name}</p>
+        <div className="product-item-container__info">
+          <p>${product.price}</p>
+          <p>{product.name}</p>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
-
-export default ProductItem
+export default ProductItem;

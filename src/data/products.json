@@ -4,7 +4,24 @@
       "name": "Octane Model #001",
       "id": "001",
       "price": 35.00,
-      "imgs": ["https://cutt.ly/qc58vSp"],
+      "imgs": [
+        {
+          "type": "image",
+          "url": "https://cutt.ly/qc58vSp"
+        },
+        {
+          "type": "image",
+          "url": "https://cutt.ly/0vZWDYx"
+        },
+        {
+          "type": "image",
+          "url": "https://cutt.ly/jvZWNtr"
+        },
+        {
+          "type": "video",
+          "url": "https://cutt.ly/IvZmVet"
+        }
+      ],
       "sizes": [20, 29.5, 33, 37.5, 41, 41.5, 45],
       "description": "Highly durable custom made sneakers crafted from wool to provide complete comfort for the heel"
     },
@@ -12,7 +29,24 @@
       "name": "Octane Model #002",
       "id": "002",
       "price": 25.00,
-      "imgs": ["https://cutt.ly/zc58Yn1"],
+      "imgs": [
+        {
+          "type": "image",
+          "url": "https://cutt.ly/zc58Yn1"
+        },
+        {
+          "type": "image",
+          "url": "https://cutt.ly/svZTpRA"
+        },
+        {
+          "type": "image",
+          "url": "https://cutt.ly/kvZTDaM"
+        },
+        {
+          "type": "video",
+          "url": "https://cutt.ly/HvZTKPu"
+        }
+      ],
       "sizes": [30, 32.5, 33, 37.5, 41, 42.5, 44],
       "description": "Delicately made cotton based sole to ease stress on walking through long distances"
     },
@@ -20,7 +54,24 @@
       "name": "Octane Model #003",
       "id": "003",
       "price": 29.50,
-      "imgs": ["https://cutt.ly/Dc58G5e"],
+      "imgs": [
+        {
+          "type": "image",
+          "url": "https://cutt.ly/Dc58G5e"
+        }, 
+        {
+          "type": "image",
+          "url": "https://cutt.ly/PvZT1so"
+        },
+        {
+          "type": "image",
+          "url": "https://cutt.ly/DvZT3YO"
+        },
+        {
+          "type": "video",
+          "url": "https://cutt.ly/xvZYqRa"
+        }
+      ],
       "sizes": [30, 32.5, 33, 37.5, 41, 42.5, 44],
       "description": "Fine tuned sneaker perfect for summer. made from 100% merino wool."
     },
@@ -28,7 +79,24 @@
       "name": "Octane Model #004",
       "id": "004",
       "price": 30.50,
-      "imgs": ["https://cutt.ly/vvm4PsN"],
+      "imgs": [
+        {
+          "type": "image",
+          "url": "https://cutt.ly/vvm4PsN"
+        },
+        {
+          "type": "image",
+          "url": "https://cutt.ly/1vUIrkl"
+        },
+        {
+          "type": "image",
+          "url": "https://cutt.ly/kvUOLTj"
+        },
+        {
+          "type": "video",
+          "url": "https://cutt.ly/YvUOETf"
+        }
+      ],
       "sizes": [25.5, 32.5, 33, 37.5, 40, 41.5, 39],
       "description": "Fine tuned sneaker perfect for winter. made from 100% cashmere wool."
     }

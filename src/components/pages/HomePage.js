@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import "../../styles/pages/home-page.css";
 
 function homePage() {
+  document.title = "Octane | Home of comfort for your feet"
+  
   return (
     <div className="homepage-container">
       <div className="homepage-conatiner__hero">

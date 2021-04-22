@@ -1,7 +1,8 @@
 .products-list {
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+    width: 90%;
+    justify-content: center;
     max-width: 1440px;
     margin: 3rem auto;
 }
