@@ -1,12 +1,20 @@
-.project-page-container__info {
-    display: flex;
-    margin: 7rem auto;
-    padding: 0.5rem;
-    max-width: 1440px;
+.product-page-container {
+  padding: 40px;
 }
 
-@media(max-width: 768px) {
-    .project-page-container__info {
-        display: block;
-    }
+.project-page-container__info {
+  display: flex;
+  margin: 7rem auto;
+  padding: 0.5rem;
+  max-width: 1440px;
+}
+
+@media (max-width: 768px) {
+  .product-page-container {
+    padding: 0;
+  }
+
+  .project-page-container__info {
+    display: block;
+  }
 }
