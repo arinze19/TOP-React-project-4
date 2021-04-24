@@ -42,21 +42,21 @@ function homePage() {
         <div className="homepage-container__showcase-slider">
           <div className="slider-item">
             <img src="https://cutt.ly/qc58vSp" alt="model 001" loading="lazy"/>
-            <h3>Octane Model #001</h3>
+            <h3> Model #001</h3>
             <p>Crafted from wool to provide complete comfort for the heel.</p>
             <button className="btn">Shop Now</button>
           </div>
 
           <div className="slider-item">
             <img src="https://cutt.ly/zc58Yn1" alt="model 002" loading="lazy"/>
-            <h3>Octane Model #002</h3>
+            <h3> Model #002</h3>
             <p>Cotton based sole to ease stress on walking.</p>
             <button className="btn">Shop Now</button>
           </div>
 
           <div className="slider-item">
             <img src="https://cutt.ly/Dc58G5e" alt="model 003" loading="lazy"/>
-            <h3>Octane Model #003</h3>
+            <h3> Model #003</h3>
             <p>Fine tuned sneaker perfect for summer.</p>
             <button className="btn">Shop Now</button>
           </div>

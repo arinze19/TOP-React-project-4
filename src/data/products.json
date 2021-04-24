@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "name": "Octane Model #001",
+      "name": "Model #001",
       "id": "001",
       "price": 35.00,
       "imgs": [
@@ -26,7 +26,7 @@
       "description": "Highly durable custom made sneakers crafted from wool to provide complete comfort for the heel"
     },
     {
-      "name": "Octane Model #002",
+      "name": "Model #002",
       "id": "002",
       "price": 25.00,
       "imgs": [
@@ -51,7 +51,7 @@
       "description": "Delicately made cotton based sole to ease stress on walking through long distances"
     },
     {
-      "name": "Octane Model #003",
+      "name": "Model #003",
       "id": "003",
       "price": 29.50,
       "imgs": [
@@ -76,7 +76,7 @@
       "description": "Fine tuned sneaker perfect for summer. made from 100% merino wool."
     },
     {
-      "name": "Octane Model #004",
+      "name": "Model #004",
       "id": "004",
       "price": 30.50,
       "imgs": [
