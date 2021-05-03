@@ -1,0 +1,8 @@
+.size-item-container {
+    border: 2px solid #1a1212;
+    background-color: transparent;
+    padding: 0.8rem;
+    margin: 0 0.5rem 0.5rem 0;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}

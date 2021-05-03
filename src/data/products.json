@@ -22,7 +22,7 @@
           "url": "https://cutt.ly/IvZmVet"
         }
       ],
-      "sizes": [20, 29.5, 33, 37.5, 41, 41.5, 45],
+      "sizes": [20, 29, 33, 37, 41, 41, 45, 47, 48],
       "description": "Highly durable custom made sneakers crafted from wool to provide complete comfort for the heel"
     },
     {
@@ -47,13 +47,13 @@
           "url": "https://cutt.ly/HvZTKPu"
         }
       ],
-      "sizes": [30, 32.5, 33, 37.5, 41, 42.5, 44],
+      "sizes": [30, 32, 33, 37, 41, 42, 44, 45, 48],
       "description": "Delicately made cotton based sole to ease stress on walking through long distances"
     },
     {
       "name": "Model #003",
       "id": "003",
-      "price": 29.50,
+      "price": 29.99,
       "imgs": [
         {
           "type": "image",
@@ -72,13 +72,13 @@
           "url": "https://cutt.ly/xvZYqRa"
         }
       ],
-      "sizes": [30, 32.5, 33, 37.5, 41, 42.5, 44],
+      "sizes": [30, 32, 33, 37, 41, 42, 44, 45, 48],
       "description": "Fine tuned sneaker perfect for summer. made from 100% merino wool."
     },
     {
       "name": "Model #004",
       "id": "004",
-      "price": 30.50,
+      "price": 30.99,
       "imgs": [
         {
           "type": "image",
@@ -97,7 +97,7 @@
           "url": "https://cutt.ly/YvUOETf"
         }
       ],
-      "sizes": [25.5, 32.5, 33, 37.5, 40, 41.5, 39],
+      "sizes": [25, 32, 33, 37, 40, 41, 39, 45, 48],
       "description": "Fine tuned sneaker perfect for winter. made from 100% cashmere wool."
     }
   ]
