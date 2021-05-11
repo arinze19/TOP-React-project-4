@@ -2,7 +2,7 @@ import "../../styles/product/size-list.css";
 import SizeItem from "./SizeItem";
 
 function SizeList({ sizes }) {
-  const list = sizes.map((size) => <SizeItem size={size} />);
+  const list = sizes.map((size, idx) => <SizeItem size={size} key={idx}/>);
   return (
     <div>
       <h3>Select Size:</h3>

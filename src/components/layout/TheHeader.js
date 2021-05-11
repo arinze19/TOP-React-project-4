@@ -3,10 +3,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import debounce from "../../helper-functions/debounce";
 
-function TheHeader() {
+function TheHeader({ cart }) {
   const [yOffset, setYOffset] = useState(0);
   const addBackground = { backgroundColor: "#fff" };
   const removeBackground = { backgroundColor: "transparent" };
+
   const checkSlide = () => {
     if (window.scrollY > 10) return setYOffset(1);
     return setYOffset(0);
@@ -30,7 +31,7 @@ function TheHeader() {
       </div>
 
       <div className="header-container__cart">
-        <p>Cart(0)</p>
+        <p>Cart({cart.length})</p>
       </div>
     </div>
   );
