@@ -23,8 +23,6 @@ const App = () => {
       newCart.push(newProduct)
       setCart(newCart);
     }
-
-    console.log(cart)
   }
 
   return (
