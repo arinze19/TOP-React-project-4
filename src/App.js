@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Cart   from "./components/UI/Cart"
 import Routes from "./Routes";
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
 
   return (
     <div>
+      <Cart />
       <Routes cart={cart} handleClick={handleClick} />
     </div>
   );

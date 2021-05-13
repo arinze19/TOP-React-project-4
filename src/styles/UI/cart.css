@@ -1,0 +1,15 @@
+.cart-container {
+    position: fixed;
+    z-index: 99;
+    right: 0;
+    top: 0;
+    background-color: white;
+    width: 40%;
+    height: 100%;
+    text-align: center;
+}
+
+.cart-container hr {
+    width: 80%;
+    height: 2px;
+}

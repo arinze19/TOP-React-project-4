@@ -18,3 +18,5 @@ the src folder holds four directories. 'components', 'helper-functions', 'data' 
 
 1. Add product page where users can see details of the product
 
+## Live Preview 
+A live preview of this object can be found [Here](https://arinze19.github.io/TOP-React-project-4/)
