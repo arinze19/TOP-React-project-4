@@ -1,8 +1,8 @@
 import "../../styles/product/product-description.css";
-import SizeList     from "./SizeList";
+import SizeList from "./SizeList";
 import AddToCartBtn from "../UI/AddToCartBtn.js";
 
-function ProductDescription({ product, handleClick }) {
+function ProductDescription({ product, addToCart }) {
   return (
     <div className="product-description-container">
       <h1>{product.name}</h1>
@@ -11,7 +11,7 @@ function ProductDescription({ product, handleClick }) {
       <p>{product.description}</p>
       <SizeList sizes={product.sizes} />
 
-      <AddToCartBtn product={product} handleClick={handleClick}/>
+      <AddToCartBtn product={product} addToCart={addToCart} />
     </div>
   );
 }

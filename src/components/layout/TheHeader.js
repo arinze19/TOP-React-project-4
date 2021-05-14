@@ -3,10 +3,10 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import debounce from "../../helper-functions/debounce";
 
-function TheHeader({ cart }) {
+function TheHeader({ cart, toggleCart }) {
   const [yOffset, setYOffset] = useState(0);
-  const addBackground = { backgroundColor: "#fff" };
-  const removeBackground = { backgroundColor: "transparent" };
+  const addBackground         = { backgroundColor: "#fff" };
+  const removeBackground      = { backgroundColor: "transparent" };
 
   const checkSlide = () => {
     if (window.scrollY > 10) return setYOffset(1);
@@ -30,7 +30,7 @@ function TheHeader({ cart }) {
           <Link to="/"><h2>Octane.</h2></Link>
       </div>
 
-      <div className="header-container__cart">
+      <div className="header-container__cart" onClick={() => toggleCart()}>
         <p>Cart({cart.length})</p>
       </div>
     </div>

@@ -7,15 +7,14 @@ import ProductsPage from "./components/pages/ProductsPage"
 import CheckoutPage from "./components/pages/CheckoutPage"
 
 
-const Routes = ({ cart, handleClick }) => {
+const Routes = ({ cart, addToCart, toggleCart }) => {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <TheHeader cart={cart}/>
+      <TheHeader cart={cart} toggleCart={toggleCart}/>
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/products" component={ProductsPage} />
-        {/* <Route exact path="/product/:productId" component={ProductPage}/> */}
-        <Route exact path="/product/:productId" render={(props) => <ProductPage {...props} handleClick={handleClick}/>}/>
+        <Route exact path="/product/:productId" render={(props) => <ProductPage {...props} addToCart={addToCart}/>}/>
         <Route exact path="/checkout" component={CheckoutPage} />
       </Switch>
     </BrowserRouter>

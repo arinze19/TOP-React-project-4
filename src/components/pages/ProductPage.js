@@ -4,7 +4,7 @@ import ProductDescription from "../product/ProductDescription";
 import { products }       from "../../data/products.json";
 import "../../styles/pages/product-page.css";
 
-function ProductPage({ match, handleClick }) {
+function ProductPage({ match, addToCart }) {
   const id       = match.params.productId;
   const product  = products.find(prod => prod.id === id)
   document.title = `Collection | ${product.name}`
@@ -13,7 +13,7 @@ function ProductPage({ match, handleClick }) {
     <div className="product-page-container">
       <div className="project-page-container__info">
         <ProductImages images={product.imgs} />
-        <ProductDescription product={product} handleClick={handleClick}/>
+        <ProductDescription product={product} addToCart={addToCart}/>
       </div>
       {/* <ProductComments comments={product.comments} /> */}
     </div>

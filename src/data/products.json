@@ -3,7 +3,7 @@
     {
       "name": "Model #001",
       "id": "001",
-      "price": 35.00,
+      "price": 35.0,
       "imgs": [
         {
           "type": "image",
@@ -11,11 +11,12 @@
         },
         {
           "type": "image",
-          "url": "https://cutt.ly/0vZWDYx"
+          "url": "https://cutt.ly/jvZWNtr"
         },
         {
           "type": "image",
-          "url": "https://cutt.ly/jvZWNtr"
+
+          "url": "https://cutt.ly/0vZWDYx"
         },
         {
           "type": "video",
@@ -28,7 +29,7 @@
     {
       "name": "Model #002",
       "id": "002",
-      "price": 25.00,
+      "price": 25.0,
       "imgs": [
         {
           "type": "image",
@@ -58,7 +59,7 @@
         {
           "type": "image",
           "url": "https://cutt.ly/Dc58G5e"
-        }, 
+        },
         {
           "type": "image",
           "url": "https://cutt.ly/PvZT1so"

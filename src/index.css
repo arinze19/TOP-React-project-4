@@ -14,8 +14,13 @@ html {
   color: #1a1212;
 }
 
+.las {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 hr {
-  height: 3px;
+  height: 2px;
   background-color: #1a1212;
   border: none;
 }

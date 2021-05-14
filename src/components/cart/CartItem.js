@@ -1,15 +1,25 @@
-export default function CartItem({ item }) {
+import CartQty from "./CartQty";
+import "../../styles/cart/cart-item.css";
+
+export default function CartItem({ item, removeFromCart, modifyCart }) {
   return (
     <div className="cart-item-container">
       <div className="cart-item__image">
-          <img src="" alt="" />
+        <img src={item.imageUrl} alt="something" />
       </div>
+
       <div className="cart-item__description">
-          <h2>{item.name}</h2>
+        <p>{item.name}</p>
+        <CartQty qty={item.qty} modifyCart={modifyCart} id={item.id} />
       </div>
+
       <div className="cart-item__info">
-        <p>X</p>
-        <p>{item.price}</p>
+        <div
+          className="cart-item__delete"
+          id={`${item.id}`}
+          onClick={removeFromCart}
+        ></div>
+        <p>${item.price}</p>
       </div>
     </div>
   );

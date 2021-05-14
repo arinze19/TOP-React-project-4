@@ -1,0 +1,13 @@
+.cart-qty-container {
+    border: 2px solid #1a121257;
+    width: 70px;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cart-qty__modify {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
