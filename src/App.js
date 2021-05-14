@@ -4,7 +4,7 @@ import Routes from "./Routes";
 
 const App = () => {
   const [cart, setCart] = useState([]);
-  const [cartIsOpen, setCartIsOpen] = useState(true);
+  const [cartIsOpen, setCartIsOpen] = useState(false);
 
   function addToCart(product) {
     const newCart = [...cart];
