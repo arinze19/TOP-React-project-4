@@ -1,15 +1,24 @@
 .add-to-cart-btn {
-  border: 1px solid #1a1212;
-  width: 100%;
+  border: none;
   margin-top: 1rem;
+  color: white;
   padding: 1rem;
-  color: #ccc;
-  background-color: #1a1212;
+  width: 100%;
   transition: all 0.3s ease-in-out;
+}
+
+.add-to-cart-btn-active {
+  background-color: #1a1212;
   cursor: pointer;
 }
 
-.add-to-cart-btn:hover {
+.add-to-cart-btn-disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.add-to-cart-btn-active:hover {
   background-color: transparent;
   color: #1a1212;
+  border: 1px solid #1a1212;
 }

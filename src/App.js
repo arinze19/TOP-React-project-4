@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import Cart from "./components/UI/Cart";
-import Routes from "./Routes";
+import React, { useState } from 'react';
+import Cart from './components/UI/Cart';
+import Routes from './Routes';
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -43,7 +43,7 @@ const App = () => {
   function modifyCart(e) {
     const name = e.target.className;
     const id = e.target.id;
-    
+
     const newCart = [...cart];
     const itemIdx = newCart.findIndex((x) => x.id === id);
 

@@ -1,8 +1,9 @@
 import "../../styles/product/size-item.css";
 
-function SizeItem({ size }) {
+function SizeItem({ size, selectSize, selectedSize }) {
+  const sizeIsSelected = selectedSize === size ? 'size-active' : ''
   return (
-    <button className="size-item-container">
+    <button className={`size-item-container ${sizeIsSelected}`} onClick={() => selectSize(size)}>
       {size}
     </button>
   );

@@ -1,12 +1,17 @@
 .size-item-container {
-    border: 2px solid #1a1212;
-    background-color: transparent;
-    padding: 0.8rem;
-    margin: 0 0.5rem 0.5rem 0;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+  border: 2px solid #1a1212;
+  background-color: transparent;
+  padding: 0.8rem;
+  margin: 0 0.5rem 0.5rem 0;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-.size-item-container:hover {
-    background-color: #1a121235;
+.size-item-container:hover:not(.size-active) {
+  background-color: #1a121235;
+}
+
+.size-active {
+  background-color: #1a1212;
+  color: white;
 }
