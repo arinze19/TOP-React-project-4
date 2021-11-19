@@ -1,6 +1,8 @@
 import '../../styles/UI/add-to-cart-btn.css';
+import { useDispatch } from 'react-redux';
 
-function AddToCartBtn({ addToCart, product, sizeIsSelected }) {
+function AddToCartBtn({ product, selectedSize, sizeIsSelected }) {
+  const dispatch = useDispatch();
   const disable = !sizeIsSelected;
   const cardState = sizeIsSelected
     ? 'add-to-cart-btn-active'
@@ -10,7 +12,7 @@ function AddToCartBtn({ addToCart, product, sizeIsSelected }) {
     <>
       <button
         className={`add-to-cart-btn ${cardState}`}
-        onClick={() => addToCart(product)}
+        onClick={() => dispatch({ type: 'ADD_TO_CART', payload: { product: { ...product, selectedSize } } })}
         disabled={disable}
       >
         Add to Cart

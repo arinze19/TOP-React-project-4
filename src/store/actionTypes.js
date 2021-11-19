@@ -1,1 +1,0 @@
-export const toggleCart = 'TOGGLE_CART';

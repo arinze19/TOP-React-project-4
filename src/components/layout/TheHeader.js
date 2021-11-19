@@ -1,9 +1,13 @@
 import "../../styles/layout/the-header.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import debounce from "../../helper-functions/debounce";
+import debounce from "../../helpers/debounce";
+import { useSelector, useDispatch } from 'react-redux';
 
-function TheHeader({ cart, toggleCart }) {
+function TheHeader() {
+  const { cart } = useSelector(store => store);
+  const dispatch = useDispatch();
+
   const [yOffset, setYOffset] = useState(0);
   const addBackground         = { backgroundColor: "#fff" };
   const removeBackground      = { backgroundColor: "transparent" };
@@ -30,7 +34,7 @@ function TheHeader({ cart, toggleCart }) {
           <Link to="/"><h2>Octane.</h2></Link>
       </div>
 
-      <div className="header-container__cart" onClick={() => toggleCart()}>
+      <div className="header-container__cart" onClick={() => dispatch({ type: 'TOGGLE_CART' })}>
         <p>Cart({cart.length})</p>
       </div>
     </div>

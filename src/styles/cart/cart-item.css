@@ -9,20 +9,17 @@
 }
 
 .cart-item__delete {
-  width: 10px;
-  height:10px;
-  border-radius: 50%;
-  background-color: #ee0f0f;
+  color: #ee0f0f;
   cursor: pointer;
-}  
+  font-size: 12px;
+}
 
-.cart-item__description > p { 
+.cart-item__description > p {
   margin-top: 0;
 }
 
 .cart-item__description {
   display: flex;
-  align-self: flex-start;
   flex-direction: column;
   justify-content: space-around;
 }
@@ -44,8 +41,7 @@
   object-fit: cover;
 }
 
-
-@media(max-width: 450px) {
+@media (max-width: 450px) {
   .cart-item-container {
     width: 95%;
   }

@@ -1,14 +1,11 @@
-import CartItem from "./CartItem";
-import "../../styles/cart/cart-list.css";
+import CartItem from './CartItem';
+import '../../styles/cart/cart-list.css';
+import { useSelector } from 'react-redux';
 
-export default function CartList({ cart, removeFromCart, modifyCart }) {
+export default function CartList({ removeFromCart, modifyCart }) {
+  const { cart } = useSelector((store) => store);
   const list = cart.map((item) => (
-    <CartItem
-      item={item}
-      key={item.id}
-      removeFromCart={removeFromCart}
-      modifyCart={modifyCart}
-    />
+    <CartItem item={item} key={item.id + item.selectedSize} />
   ));
   return list;
 }

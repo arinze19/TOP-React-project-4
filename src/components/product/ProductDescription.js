@@ -3,7 +3,7 @@ import '../../styles/product/product-description.css';
 import SizeList from './SizeList';
 import AddToCartBtn from '../UI/AddToCartBtn.js';
 
-function ProductDescription({ product, addToCart }) {
+function ProductDescription({ product }) {
   const [selectedSize, setSelectedSize] = useState(null);
   const [sizeIsSelected, setSizeIsSelected]= useState(false);
 
@@ -25,7 +25,7 @@ function ProductDescription({ product, addToCart }) {
       <hr />
       <p>{product.description}</p>
       <SizeList sizes={product.sizes} selectSize={selectSize} selectedSize={selectedSize} />
-      <AddToCartBtn product={product} addToCart={addToCart} sizeIsSelected={sizeIsSelected} />
+      <AddToCartBtn product={product} selectedSize={selectedSize} sizeIsSelected={sizeIsSelected} />
     </div>
   );
 }
