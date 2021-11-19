@@ -3,7 +3,6 @@
   margin: 0 auto;
   border-bottom: 1px solid #1a121257;
   display: flex;
-  padding: 1rem;
   justify-content: space-between;
   align-items: center;
 }
@@ -11,7 +10,6 @@
 .cart-item__delete {
   color: #ee0f0f;
   cursor: pointer;
-  font-size: 12px;
 }
 
 .cart-item__description > p {

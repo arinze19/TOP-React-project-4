@@ -9,8 +9,8 @@ export const addToCart = (state, product) => {
   };
 
   const prodIdx = newCart.findIndex((prod) => prod.id === product.id);
-  if(prodIdx >= 0) {
-    existingProd = newCart.find(prod => prod.id === newProduct.id);
+  if (prodIdx >= 0) {
+    existingProd = newCart.find((prod) => prod.id === newProduct.id);
     sizeIsSame = existingProd.selectedSize === newProduct.selectedSize;
   }
 
@@ -21,5 +21,30 @@ export const addToCart = (state, product) => {
     newCart.push(newProduct);
   }
 
-  return { ...state, cart: newCart }
+  return { ...state, cart: newCart };
+};
+
+export const removeFromCart = (state, item) => {
+  const id = item.id;
+  const newCart = [...state.cart];
+  const deleteIdx = newCart.findIndex((x) => x.id === id);
+  newCart.splice(deleteIdx, 1);
+
+  return { ...state, cart: newCart };
+};
+
+export const modifyCartItemQty = (state, payload) => {
+  const id = payload.item.id;
+
+  const newCart = [...state.cart];
+  const itemIdx = newCart.findIndex((x) => x.id === id);
+
+  if (payload.operation === 'decrement') {
+    if (newCart[itemIdx].qty < 2) return removeFromCart(state, payload.item)
+    newCart[itemIdx].qty -= 1;
+  } else {
+    newCart[itemIdx].qty += 1;
+  }
+
+  return { ...state, cart: newCart };
 };

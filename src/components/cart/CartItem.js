@@ -1,7 +1,10 @@
 import CartQty from './CartQty';
 import '../../styles/cart/cart-item.css';
+import { useDispatch } from 'react-redux';
 
 export default function CartItem({ item }) {
+  const dispatch = useDispatch();
+
   return (
     <div className='cart-item-container'>
       <div className='cart-item__image'>
@@ -12,12 +15,18 @@ export default function CartItem({ item }) {
         <p>
           {item.name} - ({item.selectedSize})
         </p>
-        <CartQty qty={item.qty} id={item.id} />
+        <CartQty item={item} />
       </div>
 
       <div className='cart-item__info'>
         <p>
-          <i className='las la-times cart-item__delete' id={`${item.id}`}></i>
+          <i
+            className='las la-times cart-item__delete'
+            onClick={() =>
+              dispatch({ type: 'REMOVE_FROM_CART', payload: { item } })
+            }
+            id={`${item.id}`}
+          ></i>
         </p>
 
         <p>${item.price}</p>

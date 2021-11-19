@@ -1,20 +1,33 @@
-import "../../styles/cart/cart-qty.css";
+import '../../styles/cart/cart-qty.css';
+import { useDispatch } from 'react-redux';
 
-export default function CartQty({ qty, modifyCart, id }) {
+export default function CartQty({ item }) {
+  const dispatch = useDispatch();
+
   return (
-    <div className="cart-qty-container">
+    <div className='cart-qty-container'>
       <p
-        className="cart-qty__modify decrement"
-        id={id}
-        onClick={modifyCart}
+        className='cart-qty__modify decrement'
+        id={item.id}
+        onClick={() =>
+          dispatch({
+            type: 'MODIFY_QUANTITY',
+            payload: { item, operation: 'decrement' },
+          })
+        }
       >
         -
       </p>
-      <p>{qty}</p>
+      <p>{item.qty}</p>
       <p
-        className="cart-qty__modify increment"
-        id={id}
-        onClick={modifyCart}
+        className='cart-qty__modify increment'
+        id={item.id}
+        onClick={() =>
+          dispatch({
+            type: 'MODIFY_QUANTITY',
+            payload: { item, operation: 'increment' },
+          })
+        }
       >
         +
       </p>
