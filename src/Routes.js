@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import ScrollToTop from './helpers/ScrollToTop';
 import TheHeader    from "./components/layout/TheHeader";
 import HomePage     from "./components/pages/HomePage"
 import ProductPage  from "./components/pages/ProductPage"
@@ -10,6 +11,7 @@ import CheckoutPage from "./components/pages/CheckoutPage"
 const Routes = () => {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <ScrollToTop />
       <TheHeader />
       <Switch>
         <Route exact path="/" component={HomePage} />
