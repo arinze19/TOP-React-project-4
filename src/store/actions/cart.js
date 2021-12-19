@@ -5,7 +5,7 @@ export const addToCart = (state, product) => {
   const newProduct = {
     ...product,
     qty: 1,
-    imageUrl: product.imgs[2].url,
+    imageUrl: product.imagesUrl[2].url,
   };
 
   const prodIdx = newCart.findIndex((prod) => prod.id === product.id);
