@@ -1,0 +1,28 @@
+.review-item-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  border-bottom: 1px solid #1a1212;
+}
+
+.review-item__main {
+  width: 50%;
+}
+
+@media (max-width: 767px) {
+  .review-item-container {
+    flex-direction: column;
+    width: 95%;
+    align-items: flex-start;
+  }
+  
+  .review-item__main {
+    order: 3;
+  }
+
+  .review-item__main {
+    width: 100%;
+  }
+}

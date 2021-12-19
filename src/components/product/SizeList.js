@@ -1,8 +1,8 @@
 import '../../styles/product/size-list.css';
 import SizeItem from './SizeItem';
 
-function SizeList({ sizes, selectSize, selectedSize }) {
-  const list = sizes.map((size, idx) => (
+function SizeList({ availableSizes, selectSize, selectedSize }) {
+  const list = availableSizes.map((size, idx) => (
     <SizeItem
       size={size}
       selectSize={selectSize}

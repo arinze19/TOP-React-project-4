@@ -1,6 +1,6 @@
 import ProductImages      from "../product/ProductImages";
 import ProductDescription from "../product/ProductDescription";
-// import ProductComments    from "../product/ProductImages";
+import ReviewList from "../reviews/ReviewList";
 import "../../styles/pages/product-page.css";
 import { useSelector } from 'react-redux';
 
@@ -13,10 +13,10 @@ function ProductPage({ match }) {
   return (
     <div className="product-page-container">
       <div className="project-page-container__info">
-        <ProductImages images={product.imgs} />
+        <ProductImages images={product.imagesUrl} />
         <ProductDescription product={product} />
       </div>
-      {/* <ProductComments comments={product.comments} /> */}
+      <ReviewList comments={product.comments} />
     </div>
   );
 }

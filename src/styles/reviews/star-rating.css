@@ -1,0 +1,5 @@
+.star-rating-container > .las,
+.star-rating-container > .lar, 
+.star-rating-container > .la-star {
+  font-size: 16px;
+}

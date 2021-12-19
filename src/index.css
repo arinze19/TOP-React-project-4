@@ -1,19 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
 
 /*  Jost  */
 * {
   box-sizing: border-box;
-  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+  font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
 }
 
-h1, 
-h2, 
-h3, 
+h1,
+h2,
+h3,
 h4,
-h5, 
+h5,
 h6 {
-   margin: 0;
- }
+  margin: 0;
+}
 
 body,
 html {
@@ -21,11 +21,6 @@ html {
   margin: 0;
   background-color: #fcf8f3;
   color: #1a1212;
-}
-
-.las {
-  font-size: 1.5rem;
-  cursor: pointer;
 }
 
 hr {
@@ -46,6 +41,12 @@ hr {
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   outline: none;
+}
+
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .btn:hover {

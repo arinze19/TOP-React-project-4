@@ -1,8 +1,9 @@
-import { products } from '../data/products.json';
+//import { products } from '../data/products.json';
 import { addToCart, removeFromCart, modifyCartItemQty } from './actions/cart'
+import { loadAllProducts } from './actions/product'
 
 const initialState = {
-  products: products,
+  products: [],
   cart: [],
   isLoggedIn: false,
   cartIsOpen: false,
@@ -18,6 +19,8 @@ export default function reducers(state = initialState, { type, payload }) {
       return removeFromCart(state, payload.item);
     case 'MODIFY_QUANTITY': 
       return modifyCartItemQty(state, payload);
+    case 'LOAD_ALL_PRODUCTS': 
+      return loadAllProducts(state, payload);
     default:
       return state;
   }

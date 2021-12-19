@@ -24,7 +24,7 @@ function ProductDescription({ product }) {
       <p>${product.price}</p>
       <hr />
       <p>{product.description}</p>
-      <SizeList sizes={product.sizes} selectSize={selectSize} selectedSize={selectedSize} />
+      <SizeList availableSizes={product.availableSizes} selectSize={selectSize} selectedSize={selectedSize} />
       <AddToCartBtn product={product} selectedSize={selectedSize} sizeIsSelected={sizeIsSelected} />
     </div>
   );

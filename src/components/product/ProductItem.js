@@ -6,7 +6,7 @@ function ProductItem({ product }) {
     <Link to={`/product/${product.id}`}>
       <div className="product-item-container">
         <div className="product-item-container__imgBg">
-          <img src={product.imgs[0].url} alt={product.name} />
+          <img src={product.imagesUrl[0].url} alt={product.name} />
         </div>
 
         <div className="product-item-container__info">
