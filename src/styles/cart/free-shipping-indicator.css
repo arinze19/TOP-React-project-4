@@ -1,0 +1,17 @@
+.free-shipping-indicator-container {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.free-shipping-indicator__main {
+  height: 8px;
+  background-color: #ccc;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.free-shipping-indicator__main__counter {
+  height: 8px;
+  background-color: #1a1212;
+  transition: all 0.5s ease-in-out;
+}

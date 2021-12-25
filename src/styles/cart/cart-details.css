@@ -1,0 +1,14 @@
+.cart-details-container {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+}
+
+.cart-details-container__total-price,
+.cart-details-container__shipping-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

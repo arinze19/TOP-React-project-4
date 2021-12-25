@@ -21,7 +21,12 @@ export const addToCart = (state, product) => {
     newCart.push(newProduct);
   }
 
-  return { ...state, cart: newCart };
+  return {
+    ...state,
+    cart: newCart,
+    totalPrice: priceHelper.totalPrice(newCart),
+    deliveryFee: priceHelper.deliveryFee(newCart),
+  };
 };
 
 export const removeFromCart = (state, item) => {
@@ -30,7 +35,12 @@ export const removeFromCart = (state, item) => {
   const deleteIdx = newCart.findIndex((x) => x.id === id);
   newCart.splice(deleteIdx, 1);
 
-  return { ...state, cart: newCart };
+  return {
+    ...state,
+    cart: newCart,
+    totalPrice: priceHelper.totalPrice(newCart),
+    deliveryFee: priceHelper.deliveryFee(newCart),
+  };
 };
 
 export const modifyCartItemQty = (state, payload) => {
@@ -40,11 +50,34 @@ export const modifyCartItemQty = (state, payload) => {
   const itemIdx = newCart.findIndex((x) => x.id === id);
 
   if (payload.operation === 'decrement') {
-    if (newCart[itemIdx].qty < 2) return removeFromCart(state, payload.item)
+    if (newCart[itemIdx].qty < 2) return removeFromCart(state, payload.item);
     newCart[itemIdx].qty -= 1;
   } else {
     newCart[itemIdx].qty += 1;
   }
 
-  return { ...state, cart: newCart };
+  return {
+    ...state,
+    cart: newCart,
+    totalPrice: priceHelper.totalPrice(newCart),
+    deliveryFee: priceHelper.deliveryFee(newCart),
+  };
+};
+
+// ======================================  helper functions
+const priceHelper = {
+  totalPrice(cart) {
+    return cart.reduce((accum, item) => {
+      return accum + item.price * item.qty;
+    }, 0);
+  },
+  deliveryFee(cart) {
+    let deliveryFee = (this.totalPrice(cart) * 0.03).toFixed(2);
+
+    if (this.totalPrice(cart) >= 200) {
+      deliveryFee = 'FREE';
+    }
+
+    return deliveryFee;
+  },
 };

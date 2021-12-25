@@ -1,6 +1,8 @@
 import CartList from '../cart/CartList';
 import '../../styles/UI/cart.css';
 import { useSelector, useDispatch } from 'react-redux';
+import CartDetails from '../cart/CartDetails';
+import FreeShippingIndicator from '../cart/FreeShippingIndicator';
 
 function Cart({ removeFromCart, modifyCart }) {
   const { cartIsOpen } = useSelector((state) => state);
@@ -16,10 +18,12 @@ function Cart({ removeFromCart, modifyCart }) {
           </p>
         </div>
         <hr />
+        <FreeShippingIndicator />
         <CartList
           removeFromCart={removeFromCart}
           modifyCart={modifyCart}
         />
+        <CartDetails />
       </div>
     );
   } else {

@@ -7,6 +7,9 @@ const initialState = {
   cart: [],
   isLoggedIn: false,
   cartIsOpen: false,
+  totalPrice: 0,
+  deliveryFee: 0,
+  freeDeliveryThreshold: 200
 };
 
 export default function reducers(state = initialState, { type, payload }) {
