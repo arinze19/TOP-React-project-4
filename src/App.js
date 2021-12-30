@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import Cart from './components/UI/Cart';
 import Routes from './Routes';
+import TheFooter from './components/layout/TheFooter';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -21,6 +22,7 @@ const App = () => {
     <div>
       <Cart />
       <Routes />
+      <TheFooter />
     </div>
   );
 };

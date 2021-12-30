@@ -37,8 +37,8 @@ hr {
   text-transform: uppercase;
   background-color: #241c15;
   color: #fff;
-  border: none;
-  transition: all 0.3s ease-in-out;
+  border: 1px solid #241c15;
+  transition: background-color 0.3s ease-in-out;
   cursor: pointer;
   outline: none;
 }
@@ -51,6 +51,5 @@ li {
 
 .btn:hover {
   background-color: transparent;
-  border: 1px solid #241c15;
   color: #241c15;
 }
