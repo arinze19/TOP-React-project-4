@@ -10,7 +10,9 @@ export default function TheFooter() {
           <form>
             <input type='text' />
           </form>
-          <button className="btn"> Sign Up</button>
+          <button className="btn">
+             Let's go <i className="lab la-telegram-plane"></i>
+          </button>
         </div>
         <div className='footer-grid'>
           <div className='footer-links'>
