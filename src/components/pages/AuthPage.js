@@ -14,13 +14,9 @@ export default function AuthPage() {
             <input type='text' name='email' /> 
             <br />
             <br />
-            <label htmlFor='name'>Name:</label> <br />
-            <input type='text' name='name' /> 
-            <br />
-            <br />
             <label htmlFor='password'>Password:</label> <br />
             <input type='password' /> <br />
-            <button className='btn'>sign in</button>
+            <button className='btn'>login</button>
           </form>
         </div>
         <div className='auth-container__main__sign-up'>
@@ -35,9 +31,13 @@ export default function AuthPage() {
             <input type='text' name='email' /> 
             <br />
             <br />
+            <label htmlFor='name'>Name:</label> <br />
+            <input type='text' name='name' /> 
+            <br />
+            <br />
             <label htmlFor='password'>Password:</label> <br />
             <input type='password' /> <br />
-            <button className='btn'>sign in</button>
+            <button className='btn'>sign up</button>
           </form>
         </div>
       </main>
