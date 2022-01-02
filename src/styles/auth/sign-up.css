@@ -1,0 +1,35 @@
+.sign-up-container {
+  width: 40%;
+  padding: 10px;
+}
+
+.sign-up-container__form-control {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.login-container__form-control label {
+  font-size: 23px;
+}
+
+.sign-up-container__form-control input {
+  padding: 15px;
+  width: 90%;
+  margin-top: 10px;
+  outline: none;
+}
+
+.sign-up-container__form-control button {
+  margin: 2rem 0 0;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .sign-up-container {
+    width: 100%;
+    padding: 0;
+  }
+  .asign-up-container__form-control input {
+    width: 100%;
+  }
+}

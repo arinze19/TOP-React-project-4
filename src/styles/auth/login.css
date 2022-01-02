@@ -1,0 +1,35 @@
+.login-container {
+  width: 40%;
+  padding: 10px;
+}
+
+.login-container__form-control {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.login-container__form-control label {
+  font-size: 23px;
+}
+
+.login-container__form-control input {
+  padding: 15px;
+  width: 90%;
+  margin-top: 10px;
+  outline: none;
+}
+
+.login-container__form-control button {
+  margin: 2rem 0 0;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    width: 100%;
+    padding: 0;
+  }
+  .login-container__form-control input {
+    width: 100%;
+  }
+}

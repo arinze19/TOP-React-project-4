@@ -5,12 +5,18 @@ import debounce from '../../helpers/debounce';
 import { useSelector, useDispatch } from 'react-redux';
 
 function TheHeader() {
-  const { cart } = useSelector((store) => store);
+  const { cart, isLoggedIn } = useSelector((store) => store);
   const dispatch = useDispatch();
 
   const [yOffset, setYOffset] = useState(0);
   const addBackground = { backgroundColor: '#fff' };
   const removeBackground = { backgroundColor: 'transparent' };
+
+  const styles = {
+    backgroundColor: isLoggedIn ? 'rgb(26 18 18 / 83%)' : '#ccc'
+  }
+
+  console.log(isLoggedIn)
 
   const checkSlide = () => {
     if (window.scrollY > 10) return setYOffset(1);
@@ -24,7 +30,7 @@ function TheHeader() {
       className='header-container'
       style={yOffset !== 0 ? addBackground : removeBackground}
     >
-      <div className='header-container__motto'>
+      <div className='header-container__motto' style={styles}>
         <Link to='/auth'>
           <i className='las la-user'></i>
         </Link>
