@@ -16,8 +16,6 @@ function TheHeader() {
     backgroundColor: isLoggedIn ? 'rgb(26 18 18 / 83%)' : '#ccc'
   }
 
-  console.log(isLoggedIn)
-
   const checkSlide = () => {
     if (window.scrollY > 10) return setYOffset(1);
     return setYOffset(0);

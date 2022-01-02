@@ -31,6 +31,13 @@ export default function reducers(state = initialState, { type, payload }) {
         user: payload.user,
         token: payload.token,
       };
+    case 'LOG_OUT': 
+      return {
+        ...state,
+        isLoggedIn: false,
+        user: {},
+        token: null
+      }
     default:
       return state;
   }
