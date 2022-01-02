@@ -1,20 +1,13 @@
 {
   "files": {
-    "main.css": "/TOP-React-project-4/static/css/main.404e5a8a.chunk.css",
-    "main.js": "/TOP-React-project-4/static/js/main.1cdf8d24.chunk.js",
-    "main.js.map": "/TOP-React-project-4/static/js/main.1cdf8d24.chunk.js.map",
-    "runtime-main.js": "/TOP-React-project-4/static/js/runtime-main.c3f8c743.js",
-    "runtime-main.js.map": "/TOP-React-project-4/static/js/runtime-main.c3f8c743.js.map",
-    "static/js/2.7fb3e514.chunk.js": "/TOP-React-project-4/static/js/2.7fb3e514.chunk.js",
-    "static/js/2.7fb3e514.chunk.js.map": "/TOP-React-project-4/static/js/2.7fb3e514.chunk.js.map",
+    "main.css": "/TOP-React-project-4/static/css/main.2f3cb39a.css",
+    "main.js": "/TOP-React-project-4/static/js/main.840136b5.js",
     "index.html": "/TOP-React-project-4/index.html",
-    "static/css/main.404e5a8a.chunk.css.map": "/TOP-React-project-4/static/css/main.404e5a8a.chunk.css.map",
-    "static/js/2.7fb3e514.chunk.js.LICENSE.txt": "/TOP-React-project-4/static/js/2.7fb3e514.chunk.js.LICENSE.txt"
+    "main.2f3cb39a.css.map": "/TOP-React-project-4/static/css/main.2f3cb39a.css.map",
+    "main.840136b5.js.map": "/TOP-React-project-4/static/js/main.840136b5.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.c3f8c743.js",
-    "static/js/2.7fb3e514.chunk.js",
-    "static/css/main.404e5a8a.chunk.css",
-    "static/js/main.1cdf8d24.chunk.js"
+    "static/css/main.2f3cb39a.css",
+    "static/js/main.840136b5.js"
   ]
 }
