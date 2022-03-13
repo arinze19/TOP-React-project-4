@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import SignUp from '../auth/SignUp';
-import Login from '../auth/Login';
-import '../../styles/pages/auth-page.css';
+import SignUp from '../components/auth/SignUp';
+import Login from '../components/auth/Login';
+import '../styles/pages/auth-page.css';
 
 export default function AuthPage() {
   const { isLoggedIn } = useSelector(state => state);

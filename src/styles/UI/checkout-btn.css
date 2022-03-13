@@ -1,0 +1,26 @@
+.checkout-btn {
+    margin-top: 1rem;
+    color: white;
+    padding: 1rem;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    background-color: #1a1212;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .checkout-btn-active {
+    border: 1px solid #1a1212;
+    background-color: #1a1212;
+    cursor: pointer;
+  }
+  
+  .checkout-btn-disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .checkout-btn-active:hover {
+    background-color: transparent;
+    color: #1a1212;
+  }

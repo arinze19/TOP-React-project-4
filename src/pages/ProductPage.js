@@ -1,7 +1,7 @@
-import ProductImages      from "../product/ProductImages";
-import ProductDescription from "../product/ProductDescription";
-import ReviewList from "../reviews/ReviewList";
-import "../../styles/pages/product-page.css";
+import ProductImages      from "../components/product/ProductImages";
+import ProductDescription from "../components/product/ProductDescription";
+import ReviewList from "../components/reviews/ReviewList";
+import "../styles/pages/product-page.css";
 import { useSelector } from 'react-redux';
 
 function ProductPage({ match }) {

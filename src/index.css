@@ -29,10 +29,18 @@ hr {
   border: none;
 }
 
+input {
+  border-radius: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
 /* ============== custom classes */
 
 .btn {
-  padding: 1rem;
+  padding: 0.8rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   background-color: #241c15;
@@ -45,6 +53,11 @@ hr {
 
 li {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
   margin: 0;
   padding: 0;
 }

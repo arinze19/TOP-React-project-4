@@ -1,0 +1,54 @@
+.checkout-page-container {
+  padding: 1rem;
+  max-width: 1440px;
+  margin: 5rem auto;
+}
+
+.checkout-page__form {
+  max-width: 600px;
+}
+
+.checkout-page-container input {
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border: 1px solid #1a121288;
+  color: #1a1212;
+}
+
+.checkout-page-container button {
+  width: 100%;
+}
+
+.checkout-page-container .grid {
+  display: grid;
+}
+
+.checkout-page__footer img {
+  margin-top: 0.5rem;
+  margin-right: 1.5rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-three {
+  grid-template-columns: repeat(3, 32%);
+  column-gap: 2%;
+}
+
+.w-two {
+  grid-template-columns: repeat(3, 49%);
+  column-gap: 2%;
+}
+
+
+@media (max-width: 912px) {
+  .checkout-page-container {
+    margin-top: 1rem;
+  }
+
+  .checkout-page__form {
+    margin: 0 auto;
+  }
+}

@@ -1,12 +1,13 @@
 import '../../styles/layout/the-header.css';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import debounce from '../../helpers/debounce';
 import { useSelector, useDispatch } from 'react-redux';
 
 function TheHeader() {
   const { cart, isLoggedIn } = useSelector((store) => store);
   const dispatch = useDispatch();
+  const location = useLocation();
 
   const [yOffset, setYOffset] = useState(0);
   const addBackground = { backgroundColor: '#fff' };
@@ -41,7 +42,7 @@ function TheHeader() {
       </div>
 
       <div
-        className='header-container__cart'
+        className={`header-container__cart ${location.pathname === '/checkout' ? 'hide' : null}`}
         onClick={() => dispatch({ type: 'TOGGLE_CART' })}
       >
         <p>Cart({cart.length})</p>
