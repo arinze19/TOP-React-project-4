@@ -29,8 +29,11 @@ hr {
   border: none;
 }
 
-input:focus {
+input {
   border-radius: 0;
+}
+
+input:focus {
   outline: none;
 }
 
