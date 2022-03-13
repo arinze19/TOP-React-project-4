@@ -8,11 +8,10 @@ import { Provider } from 'react-redux';
 
 store.dispatch(fetchProducts)
 
-
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+        <App />
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

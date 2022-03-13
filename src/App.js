@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import Cart from './components/UI/Cart';
 import Routes from './Routes';
 import TheFooter from './components/layout/TheFooter';
@@ -8,9 +9,11 @@ const App = () => {
 
   return (
     <div>
-      <Cart />
-      <Routes />
-      <TheFooter />
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <Cart />
+        <Routes />
+        <TheFooter />
+      </BrowserRouter>
     </div>
   );
 };

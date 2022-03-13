@@ -19,9 +19,6 @@
   color: white;
 }
 
-.footer-container input:focus {
-  outline: none;
-}
 .footer-container .form {
   padding: 30px 55px 0;
 }

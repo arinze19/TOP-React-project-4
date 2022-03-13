@@ -1,4 +1,5 @@
 import React from 'react';
+import CheckoutBtn from '../UI/CheckoutBtn';
 import { useSelector } from 'react-redux';
 import '../../styles/cart/cart-details.css';
 
@@ -19,6 +20,7 @@ export default function CartDetails() {
         </h3>
         <p>${deliveryFee}</p>
       </div>
+      <CheckoutBtn />
     </div>
   );
 }

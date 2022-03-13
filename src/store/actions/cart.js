@@ -75,7 +75,7 @@ const priceHelper = {
     let deliveryFee = (this.totalPrice(cart) * 0.03).toFixed(2);
 
     if (this.totalPrice(cart) >= 200) {
-      deliveryFee = 'FREE';
+      deliveryFee = 0;
     }
 
     return deliveryFee;

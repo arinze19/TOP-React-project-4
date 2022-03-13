@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../../styles/pages/home-page.css";
+import "../styles/pages/home-page.css";
 
 function homePage() {
   document.title = "Octane | Home of comfort for your feet"

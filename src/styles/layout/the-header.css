@@ -1,6 +1,7 @@
 .header-container {
   width: 100%;
   position: fixed;
+  z-index: 3;
   top: 0;
   background-color: transparent;
   transition: all 0.3s ease-in-out;
@@ -29,4 +30,9 @@
 
 .header-container__cart {
   cursor: pointer;
+}
+
+.header-container__cart.hide {
+  visibility: hidden;
+  pointer-events: none;
 }
