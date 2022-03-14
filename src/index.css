@@ -61,8 +61,3 @@ ul {
   margin: 0;
   padding: 0;
 }
-
-.btn:hover {
-  background-color: transparent;
-  color: #241c15;
-}

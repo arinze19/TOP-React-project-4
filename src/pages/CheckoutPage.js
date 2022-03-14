@@ -38,27 +38,27 @@ function CheckoutPage() {
             <form onSubmit={handleSubmit} className="checkout-page__form">
                 <div className="checkout-page__delivery-info">
                     <h4>Delivery Information:</h4>
-                    <input className="w-full" type="text" placeholder="Email" name="email" value={deliveryInfo.email} onChange={(e) => handleChangeDelivery(e)} />
+                    <input className="w-full" type="text" placeholder="Email" name="email" required value={deliveryInfo.email} onChange={(e) => handleChangeDelivery(e)} />
                     <div className="grid w-two">
-                        <input type="text" placeholder="First Name" name="firstName" value={deliveryInfo.firstName} onChange={(e) => handleChangeDelivery(e)} />
-                        <input type="text" placeholder="Last Name" name="lastName" value={deliveryInfo.lastName} onChange={(e) => handleChangeDelivery(e)} />
+                        <input type="text" placeholder="First Name" name="firstName" required value={deliveryInfo.firstName} onChange={(e) => handleChangeDelivery(e)} />
+                        <input type="text" placeholder="Last Name" name="lastName" required value={deliveryInfo.lastName} onChange={(e) => handleChangeDelivery(e)} />
                     </div>
-                    <input className="w-full" type="text" placeholder="Country" name="country" value={deliveryInfo.city} onChange={(e) => handleChangeDelivery(e)} />
+                    <input className="w-full" type="text" placeholder="Country" name="country" required value={deliveryInfo.city} onChange={(e) => handleChangeDelivery(e)} />
                     <div className="grid w-three">
-                        <input type="text" placeholder="City" name="city" value={deliveryInfo.country} onChange={(e) => handleChangeDelivery(e)} />
-                        <input type="text" placeholder="State/Province" name="state" value={deliveryInfo.state} onChange={(e) => handleChangeDelivery(e)} />
-                        <input type="text" placeholder="ZIP Code" name="zip" value={deliveryInfo.zip} onChange={(e) => handleChangeDelivery(e)} />
+                        <input type="text" placeholder="City" name="city" required value={deliveryInfo.country} onChange={(e) => handleChangeDelivery(e)} />
+                        <input type="text" placeholder="State/Province" name="state" required value={deliveryInfo.state} onChange={(e) => handleChangeDelivery(e)} />
+                        <input type="text" placeholder="ZIP Code" name="zip" required value={deliveryInfo.zip} onChange={(e) => handleChangeDelivery(e)} />
                     </div>
                 </div>
                 <br />
                 <br />
                 <div className="checkout-page__billing-info">
                     <h4>Billing Information:</h4>
-                    <input className="w-full" type="number" placeholder="Card Number" name="cardNumber" value={billingInfo.cardNumber} onChange={(e) => handleChangeBilling(e)} />
+                    <input className="w-full" type="number" placeholder="Card Number" name="cardNumber" required value={billingInfo.cardNumber} onChange={(e) => handleChangeBilling(e)} />
                     <div className="grid w-three">
-                        <input type="number" placeholder="PIN" name="pin" value={billingInfo.pin} onChange={(e) => handleChangeBilling(e)} />
-                        <input type="number" placeholder="Expiry Date" name="expiryDate" value={billingInfo.expiryDate} onChange={(e) => handleChangeBilling(e)} />
-                        <input type="number" placeholder="CVV" name="cvv" value={billingInfo.cvv} onChange={(e) => handleChangeBilling(e)} />
+                        <input type="number" placeholder="PIN" name="pin" required value={billingInfo.pin} onChange={(e) => handleChangeBilling(e)} />
+                        <input type="number" placeholder="Expiry Date" name="expiryDate" required value={billingInfo.expiryDate} onChange={(e) => handleChangeBilling(e)} />
+                        <input type="number" placeholder="CVV" name="cvv" required value={billingInfo.cvv} onChange={(e) => handleChangeBilling(e)} />
                     </div>
                 </div>
                 <br />

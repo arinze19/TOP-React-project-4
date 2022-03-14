@@ -43,7 +43,6 @@ export default function Login() {
     } else if (data && data.user.isEmailVerified) {
       history.replace('/')
       dispatch({ type: 'AUTH_CALL', payload: data });
-      alert('successfully logged in');
     }
   }
 
@@ -58,8 +57,9 @@ export default function Login() {
         <input
           type='text'
           name='login-email'
-          value={loginEmail}
           autoComplete='off'
+          required
+          value={loginEmail}
           onChange={(e) => handleChange(e, 'loginEmail')}
         />
         <br />
@@ -69,6 +69,7 @@ export default function Login() {
           type='password'
           name='login-password'
           autoComplete='off'
+          required
           value={loginPassword}
           onChange={(e) => handleChange(e, 'loginPassword')}
         />{' '}

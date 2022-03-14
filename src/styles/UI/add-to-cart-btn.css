@@ -16,9 +16,3 @@
   background-color: #ccc;
   cursor: not-allowed;
 }
-
-.add-to-cart-btn-active:hover {
-  background-color: transparent;
-  color: #1a1212;
-  border: 1px solid #1a1212;
-}

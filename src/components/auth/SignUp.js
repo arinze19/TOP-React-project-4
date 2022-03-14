@@ -67,6 +67,7 @@ export default function SignUp() {
           type='text'
           name='sign-up-email'
           autoComplete='off'
+          required
           value={signUpEmail}
           onChange={(e) => handleChange(e, 'signUpEmail')}
         />
@@ -77,6 +78,7 @@ export default function SignUp() {
           type='text'
           name='sign-up-name'
           autoComplete='off'
+          required
           value={signUpName}
           onChange={(e) => handleChange(e, 'signUpName')}
         />
@@ -87,6 +89,7 @@ export default function SignUp() {
           type='password'
           autoComplete='off'
           name='sign-up-password'
+          required
           value={signUpPassword}
           onChange={(e) => handleChange(e, 'signUpPassword')}
         />{' '}
