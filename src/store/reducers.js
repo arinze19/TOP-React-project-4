@@ -10,6 +10,11 @@ const initialState = {
   totalPrice: 0,
   deliveryFee: 0,
   freeDeliveryThreshold: 200,
+  notification: {
+    isActive: false,
+    status: 'success',
+    message: ''
+  }
 };
 
 export default function reducers(state = initialState, { type, payload }) {
@@ -22,6 +27,8 @@ export default function reducers(state = initialState, { type, payload }) {
       return removeFromCart(state, payload.item);
     case 'MODIFY_QUANTITY':
       return modifyCartItemQty(state, payload);
+    case 'SET_NOTIFICATION':
+      return { ...state, notification: { isActive: !state.notification.isActive, status: payload.status, message: payload.message } }
     case 'LOAD_ALL_PRODUCTS':
       return { ...state, products: payload };
     case 'AUTH_CALL':
@@ -31,7 +38,7 @@ export default function reducers(state = initialState, { type, payload }) {
         user: payload.user,
         token: payload.token,
       };
-    case 'LOG_OUT': 
+    case 'LOG_OUT':
       return {
         ...state,
         isLoggedIn: false,
