@@ -1,0 +1,1 @@
+export const setNotification = (state, payload) => ({ ...state, notification: { isActive: !state.notification.isActive, status: payload.status, message: payload.message } })

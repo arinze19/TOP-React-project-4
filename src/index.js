@@ -3,10 +3,9 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
 import store from './store';
-import { fetchProducts } from './store/reducers';
 import { Provider } from 'react-redux';
 
-store.dispatch(fetchProducts)
+
 
 ReactDOM.render(
   <React.StrictMode>
