@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../../styles/layout/the-footer.css';
 
 export default function TheFooter() {
+  const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    setEmail(e.target.value);
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  }
+
   return (
     <div className='footer-container'>
       <main>
         <div className='form'>
           <p>be the first to know when we have cool stuff</p>
-          <form>
-            <input type='text' />
+          <form onSubmit={(e) => handleSubmit(e)}>
+            <input type='email' value={email} onChange={(e) => handleChange(e)} />
           </form>
           <button className="btn">
              Let's go <i className="lab la-telegram-plane"></i>
