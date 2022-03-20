@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import { login } from '../../helpers/thunk';
 import '../../styles/auth/login.css';
 
 export default function Login() {
   const dispatch = useDispatch();
-
+  const history = useHistory();
+  const { loading } = useSelector(state => state);
   const [info, setInfo] = useState({ email: '', password: '' });
-
 
   const handleChange = (e) => { 
      setInfo({ ...info, [e.target.name]: e.target.value})
@@ -15,7 +16,7 @@ export default function Login() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    dispatch(login(info));
+    dispatch(login(info, history));
   }
 
   return (
@@ -46,9 +47,9 @@ export default function Login() {
           onChange={(e) => handleChange(e, 'loginPassword')}
         />{' '}
         <br />
-        <button className='btn' type="submit">
+        <button className='btn' type="submit" disabled={loading.signIn}>
           login
-          <i className={`las la-atom`}></i>
+          <i className={`las ${loading.signIn ? 'la-atom spinner' : ''}`}></i>
         </button>
       </form>
     </div>

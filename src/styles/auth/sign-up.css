@@ -25,6 +25,10 @@
   width: 90%;
 }
 
+.sign-up-container__form-control button:disabled {
+  cursor: not-allowed;
+}
+
 @media (max-width: 768px) {
   .sign-up-container {
     width: 100%;

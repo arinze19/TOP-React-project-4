@@ -1,5 +1,5 @@
 import { toggleCart, addToCart, removeFromCart, modifyCartItemQty } from './reducers/cart';
-import { setNotification } from './reducers/notification';
+import { setNotification, setLoading } from './reducers/notification';
 import { loadAllProducts } from './reducers/product';
 import { signIn, signUp, logOut } from './reducers/auth';
 
@@ -8,13 +8,14 @@ const initialState = {
   cart: [],
   user: {},
   token: null,
-  isLoggedIn: false,
   cartIsOpen: false,
   totalPrice: 0,
   deliveryFee: 0,
   freeDeliveryThreshold: 200,
   loading: {
-    inline: false,
+    signUp: false,
+    signIn: false,
+    newsLetter: false,
     fullpage: false
   },
   notification: {
@@ -44,6 +45,8 @@ export default function reducers(state = initialState, { type, payload }) {
       return signUp(state, payload);
     case 'LOG_OUT':
       return logOut(state, payload);
+    case 'SET_LOADING':
+      return setLoading(state, payload);
     default:
       return state;
   }

@@ -1,1 +1,2 @@
 export const setNotification = (state, payload) => ({ ...state, notification: { isActive: !state.notification.isActive, status: payload.status, message: payload.message } })
+export const setLoading = (state, payload) => ({ ...state, loading: { ...state.loading, [payload.prop]: payload.value }});

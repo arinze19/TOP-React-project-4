@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import { register } from '../../helpers/thunk';
 import '../../styles/auth/sign-up.css';
 
 export default function SignUp() {
   const dispatch = useDispatch();
+  const history = useHistory();
+  const { loading } = useSelector(state => state);
   const [info, setInfo] = useState({ email: '', name: '', password: '' })
 
   const handleChange = (e) => {
@@ -13,7 +16,7 @@ export default function SignUp() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    dispatch(register(info))
+    dispatch(register(info, history))
   }
 
   return (
@@ -60,22 +63,11 @@ export default function SignUp() {
           onChange={(e) => handleChange(e)}
         />{' '}
         <br />
-        <button className='btn' type="submit">
+        <button className='btn' type="submit" disabled={loading.signUp}>
           sign up
-          <i className={`las la-atom`}></i>
+          <i className={`las ${loading.signUp ? 'la-atom spinner' : ''}`}></i>
         </button>
       </form>
     </div>
   );
 }
-
-
-/**
- * 
- *         
- * 
- * 
- *       dispatch(notification.create('error', 'Sorry, something went wrong please try again later'))
-      dispatch(notification.reset())
-
- */

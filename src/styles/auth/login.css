@@ -20,6 +20,10 @@
   outline: none;
 }
 
+.login-container__form-control input:disabled {
+  cursor: not-allowed;
+}
+
 .login-container__form-control button {
   margin: 2rem 0 0;
   width: 90%;
