@@ -13,6 +13,8 @@ export default function TheFooter() {
   }
 
   const handleSubmit = (e) => {
+    if (!email) return 
+    
     setEmail('');
     e.preventDefault();
     dispatch(subscribeToNewsletter(email))
@@ -26,7 +28,7 @@ export default function TheFooter() {
           <form onSubmit={(e) => handleSubmit(e)}>
             <input type='email' value={email} onChange={(e) => handleChange(e)} />
           </form>
-          <button className="btn" disabled={loading.newsLetter}>
+          <button className="btn" type="submit" onClick={(e) => handleSubmit(e)} disabled={loading.newsLetter}>
              Let's go <i className={`${loading.newsLetter ? 'las la-atom spinner' : 'lab la-telegram-plane'}`}></i>
           </button>
         </div>
