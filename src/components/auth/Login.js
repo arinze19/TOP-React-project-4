@@ -1,49 +1,22 @@
 import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import asyncCall from '../../helpers/AsyncCall';
+import { login } from '../../helpers/thunk';
 import '../../styles/auth/login.css';
 
 export default function Login() {
   const dispatch = useDispatch();
   const history = useHistory();
+  const { loading } = useSelector(state => state);
+  const [info, setInfo] = useState({ email: '', password: '' });
 
-  const [loginEmail, setLoginEmail] = useState('');
-  const [loginPassword, setLoginPassword] = useState('');
-  const [isEmailVerified, setIsEmailVerified] = useState(true);
-
-  const styles = {
-    visibility: isEmailVerified ? 'hidden' : 'visible',
-  };
-
-  const handleChange = (e, prop) => {
-    const value = e.target.value;
-    switch (prop) {
-      case 'loginEmail':
-        return setLoginEmail(value);
-      case 'loginPassword':
-        return setLoginPassword(value);
-      default:
-        return null;
-    }
+  const handleChange = (e) => { 
+     setInfo({ ...info, [e.target.name]: e.target.value})
   };
 
   async function handleSubmit(e) {
     e.preventDefault();
-
-    const body = {
-      email: loginEmail.trim(),
-      password: loginPassword,
-    };
-
-    const data = await asyncCall('sign-in', body);
-
-    if (data && !data.user.isEmailVerified) {
-      setIsEmailVerified(false);
-    } else if (data && data.user.isEmailVerified) {
-      history.replace('/')
-      dispatch({ type: 'AUTH_CALL', payload: data });
-    }
+    dispatch(login(info, history));
   }
 
   return (
@@ -56,10 +29,10 @@ export default function Login() {
         <label htmlFor='login-email'>Email:</label> <br />
         <input
           type='text'
-          name='login-email'
+          name='email'
           autoComplete='off'
           required
-          value={loginEmail}
+          value={info.email}
           onChange={(e) => handleChange(e, 'loginEmail')}
         />
         <br />
@@ -67,19 +40,18 @@ export default function Login() {
         <label htmlFor='login-password'>Password:</label> <br />
         <input
           type='password'
-          name='login-password'
+          name='password'
           autoComplete='off'
           required
-          value={loginPassword}
+          value={info.password}
           onChange={(e) => handleChange(e, 'loginPassword')}
         />{' '}
         <br />
-        <button className='btn'>login</button>
+        <button className='btn' type="submit" disabled={loading.signIn}>
+          login
+          <i className={`las ${loading.signIn ? 'la-atom spinner' : ''}`}></i>
+        </button>
       </form>
-      <p className='verification' style={styles}>
-        Oops, looks like you need to verify your email({loginEmail}) first.
-        Please verify your email and login
-      </p>
     </div>
   );
 }

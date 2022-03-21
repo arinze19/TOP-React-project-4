@@ -13,6 +13,7 @@
 }
 
 .sign-up-container__form-control input {
+  border: 1px solid #1a12127e;
   padding: 15px;
   width: 90%;
   margin-top: 10px;
@@ -21,7 +22,11 @@
 
 .sign-up-container__form-control button {
   margin: 2rem 0 0;
-  width: 100%;
+  width: 90%;
+}
+
+.sign-up-container__form-control button:disabled {
+  cursor: not-allowed;
 }
 
 @media (max-width: 768px) {

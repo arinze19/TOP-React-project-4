@@ -37,6 +37,17 @@ input:focus {
   outline: none;
 }
 
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 /* ============== custom classes */
 
 .btn {
@@ -51,13 +62,16 @@ input:focus {
   outline: none;
 }
 
-li {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.spinner {
+  animation: spinner 1.2s linear infinite;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 import CheckoutBar from '../components/UI/CheckoutBar';
 import Abeg from '../assets/abeg.svg';
 import Paystack from '../assets/paystack.svg';
@@ -7,12 +8,14 @@ import '../styles/pages/checkout-page.css';
 
 function CheckoutPage() {
     document.title = 'Octane | Checkout'
+    const { user } = useSelector(state => state);
+
     const [deliveryInfo, setDeliveryInfo] = useState({
-        email: '',
+        email: user.email || '',
         firstName: '',
         lastName: '',
         city: '',
-        country: '',
+        address: '',
         state: '',
         zip: ''
     })
@@ -43,9 +46,9 @@ function CheckoutPage() {
                         <input type="text" placeholder="First Name" name="firstName" required value={deliveryInfo.firstName} onChange={(e) => handleChangeDelivery(e)} />
                         <input type="text" placeholder="Last Name" name="lastName" required value={deliveryInfo.lastName} onChange={(e) => handleChangeDelivery(e)} />
                     </div>
-                    <input className="w-full" type="text" placeholder="Country" name="country" required value={deliveryInfo.city} onChange={(e) => handleChangeDelivery(e)} />
+                    <input className="w-full" type="text" placeholder="Address" name="address" required value={deliveryInfo.city} onChange={(e) => handleChangeDelivery(e)} />
                     <div className="grid w-three">
-                        <input type="text" placeholder="City" name="city" required value={deliveryInfo.country} onChange={(e) => handleChangeDelivery(e)} />
+                        <input type="text" placeholder="City" name="city" required value={deliveryInfo.address} onChange={(e) => handleChangeDelivery(e)} />
                         <input type="text" placeholder="State/Province" name="state" required value={deliveryInfo.state} onChange={(e) => handleChangeDelivery(e)} />
                         <input type="text" placeholder="ZIP Code" name="zip" required value={deliveryInfo.zip} onChange={(e) => handleChangeDelivery(e)} />
                     </div>
