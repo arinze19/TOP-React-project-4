@@ -1,53 +1,22 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import asyncCall from '../../helpers/AsyncCall';
+import { useHistory } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { register } from '../../helpers/thunk';
 import '../../styles/auth/sign-up.css';
 
 export default function SignUp() {
   const dispatch = useDispatch();
+  const history = useHistory();
+  const { loading } = useSelector(state => state);
+  const [info, setInfo] = useState({ email: '', name: '', password: '' })
 
-  const [signUpEmail, setSignUpEmail] = useState('');
-  const [signUpPassword, setSignUpPassword] = useState('');
-  const [signUpName, setSignUpName] = useState('');
-  const [isSuccessful, setIsSuccessful] = useState(false);
-
-  const styles = {
-    visibility: isSuccessful ? 'visible' : 'hidden',
-  };
-
-  const handleChange = (e, prop) => {
-    const value = e.target.value;
-    switch (prop) {
-      case 'signUpEmail':
-        return setSignUpEmail(value);
-      case 'signUpPassword':
-        return setSignUpPassword(value);
-      case 'signUpName':
-        return setSignUpName(value);
-      default:
-        return null;
-    }
+  const handleChange = (e) => {
+    setInfo({ ...info, [e.target.name]: e.target.value })
   };
 
   async function handleSubmit(e) {
     e.preventDefault();
-
-    const body = {
-      email: signUpEmail,
-      password: signUpPassword.trim(),
-      name: signUpName,
-    };
-
-    const data = await asyncCall('sign-up', body);
-
-    if (data) {
-      setIsSuccessful(true);
-      dispatch({ type: 'AUTH_CALL', payload: data })
-      
-      setSignUpEmail('');
-      setSignUpName('');
-      setSignUpPassword('');
-   }
+    dispatch(register(info, history))
   }
 
   return (
@@ -65,22 +34,22 @@ export default function SignUp() {
         <label htmlFor='sign-up-email'>Email:</label> <br />
         <input
           type='text'
-          name='sign-up-email'
+          name='email'
           autoComplete='off'
           required
-          value={signUpEmail}
-          onChange={(e) => handleChange(e, 'signUpEmail')}
+          value={info.email}
+          onChange={(e) => handleChange(e)}
         />
         <br />
         <br />
         <label htmlFor='sign-up-name'>Name:</label> <br />
         <input
           type='text'
-          name='sign-up-name'
+          name='name'
           autoComplete='off'
           required
-          value={signUpName}
-          onChange={(e) => handleChange(e, 'signUpName')}
+          value={info.name}
+          onChange={(e) => handleChange(e)}
         />
         <br />
         <br />
@@ -88,18 +57,17 @@ export default function SignUp() {
         <input
           type='password'
           autoComplete='off'
-          name='sign-up-password'
+          name='password'
           required
-          value={signUpPassword}
-          onChange={(e) => handleChange(e, 'signUpPassword')}
+          value={info.password}
+          onChange={(e) => handleChange(e)}
         />{' '}
         <br />
-        <button className='btn'>sign up</button>
+        <button className='btn' type="submit" disabled={loading.signUp}>
+          sign up
+          <i className={`las ${loading.signUp ? 'la-atom spinner' : ''}`}></i>
+        </button>
       </form>
-      <p className='verification' style={styles}>
-        Almost there! An verification email has been sent to {signUpEmail},
-        please verify your email and then login
-      </p>
     </div>
   );
 }

@@ -1,0 +1,1 @@
+export const loadAllProducts = (state, payload) => ({ ...state, products: payload })

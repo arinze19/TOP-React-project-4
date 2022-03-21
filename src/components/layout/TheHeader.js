@@ -5,7 +5,8 @@ import debounce from '../../helpers/debounce';
 import { useSelector, useDispatch } from 'react-redux';
 
 function TheHeader() {
-  const { cart, isLoggedIn } = useSelector((store) => store);
+  const { cart, token } = useSelector((store) => store);
+
   const dispatch = useDispatch();
   const location = useLocation();
 
@@ -14,7 +15,7 @@ function TheHeader() {
   const removeBackground = { backgroundColor: 'transparent' };
 
   const styles = {
-    backgroundColor: isLoggedIn ? 'rgb(26 18 18 / 83%)' : '#ccc'
+    backgroundColor: token ? 'rgb(26 18 18 / 83%)' : '#ccc'
   }
 
   const checkSlide = () => {
