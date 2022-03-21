@@ -1,16 +1,21 @@
 import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { subscribeToNewsletter } from '../../helpers/thunk';
 import '../../styles/layout/the-footer.css';
 
 export default function TheFooter() {
+  const { loading } = useSelector(state => state);
+  const dispatch = useDispatch();
   const [email, setEmail] = useState('');
-  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setEmail(e.target.value);
   }
 
   const handleSubmit = (e) => {
+    setEmail('');
     e.preventDefault();
+    dispatch(subscribeToNewsletter(email))
   }
 
   return (
@@ -21,8 +26,8 @@ export default function TheFooter() {
           <form onSubmit={(e) => handleSubmit(e)}>
             <input type='email' value={email} onChange={(e) => handleChange(e)} />
           </form>
-          <button className="btn">
-             Let's go <i className="lab la-telegram-plane"></i>
+          <button className="btn" disabled={loading.newsLetter}>
+             Let's go <i className={`${loading.newsLetter ? 'las la-atom spinner' : 'lab la-telegram-plane'}`}></i>
           </button>
         </div>
         <div className='footer-grid'>

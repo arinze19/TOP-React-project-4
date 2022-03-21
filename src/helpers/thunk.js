@@ -36,7 +36,7 @@ export function register(info, history) {
 }
 
 export function login(info, history) {
-  return async function (dispatch, getState) {
+  return async function (dispatch) {
     dispatch(setLoading({ prop: 'signIn', value: true }));
 
     try {
@@ -44,8 +44,6 @@ export function login(info, history) {
       const { data } = response.data;
       dispatch(signIn(data));
       history.replace('/');
-
-      console.log(getState())
 
       setTimeout(() => dispatch(notification.create('success', `Hey There ${data.user.name}, welcome back to the lab ;)`)), 1000)
       setTimeout(() => dispatch(notification.reset()), 5000);
@@ -56,6 +54,27 @@ export function login(info, history) {
       setTimeout(() => dispatch(notification.reset()), 4000);
     } finally {
       dispatch(setLoading({ prop: 'signIn', value: false }))
+    }
+  }
+}
+
+export function subscribeToNewsletter(email) {
+  return async function (dispatch) {
+    dispatch(setLoading({ prop: 'newsLetter', value: true }));
+
+    try {
+      const response = await api.post('/newsletter/subscribe', { email });
+      const { message } = response.data;
+
+      dispatch(notification.create('success', message));
+      setTimeout(() => dispatch(notification.reset()), 4000);
+    } catch (err) {
+      const message = err.response.data.message || 'Sorry, something went wrong please try again later'
+      dispatch(notification.create('error', message))
+
+      setTimeout(() => dispatch(notification.reset()), 4000);  
+    } finally {
+      dispatch(setLoading({ prop: 'newsLetter', value: false }))
     }
   }
 }
