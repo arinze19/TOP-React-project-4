@@ -16,7 +16,7 @@ const initialState = {
     signUp: false,
     signIn: false,
     newsLetter: false,
-    fullpage: false
+    products: true
   },
   notification: {
     isActive: false,

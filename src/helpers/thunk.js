@@ -6,9 +6,20 @@ import api from './api';
 
 export function getProducts() {
   return async function (dispatch) {
-    const response = await api.get('/products');
-    const { data } = response.data;
-    dispatch(loadAllProducts(data.products))
+    dispatch(setLoading({ prop: 'products', value: true }));
+
+    try {
+      const response = await api.get('/products');
+      const { data } = response.data;
+      dispatch(loadAllProducts(data.products))   
+    } catch (err) {
+      const message = err.response.data.message || 'Sorry something went wrong, please try again later';
+      dispatch(notification.create('error', message))
+
+      setTimeout(() => dispatch(notification.reset()), 4000);
+    } finally {
+      dispatch(setLoading({ prop: 'products', value: false }));
+    }
   }
 }
 
