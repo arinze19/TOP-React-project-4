@@ -46,11 +46,11 @@ function CheckoutPage() {
                         <input type="text" placeholder="First Name" name="firstName" required value={deliveryInfo.firstName} onChange={(e) => handleChangeDelivery(e)} />
                         <input type="text" placeholder="Last Name" name="lastName" required value={deliveryInfo.lastName} onChange={(e) => handleChangeDelivery(e)} />
                     </div>
-                    <input className="w-full" type="text" placeholder="Address" name="address" required value={deliveryInfo.city} onChange={(e) => handleChangeDelivery(e)} />
+                    <input className="w-full" type="text" placeholder="Address" name="address" required value={deliveryInfo.address} onChange={(e) => handleChangeDelivery(e)} />
                     <div className="grid w-three">
-                        <input type="text" placeholder="City" name="city" required value={deliveryInfo.address} onChange={(e) => handleChangeDelivery(e)} />
+                        <input type="text" placeholder="City" name="city" required value={deliveryInfo.city} onChange={(e) => handleChangeDelivery(e)} />
                         <input type="text" placeholder="State/Province" name="state" required value={deliveryInfo.state} onChange={(e) => handleChangeDelivery(e)} />
-                        <input type="text" placeholder="ZIP Code" name="zip" required value={deliveryInfo.zip} onChange={(e) => handleChangeDelivery(e)} />
+                        <input type="number" placeholder="ZIP Code" name="zip" required value={deliveryInfo.zip} onChange={(e) => handleChangeDelivery(e)} />
                     </div>
                 </div>
                 <br />
