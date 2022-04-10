@@ -8,10 +8,6 @@
   margin-bottom: 10px;
 }
 
-.login-container__form-control label {
-  font-size: 23px;
-}
-
 .sign-up-container__form-control input {
   border: 1px solid #1a12127e;
   padding: 15px;

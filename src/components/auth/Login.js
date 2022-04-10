@@ -26,7 +26,7 @@ export default function Login() {
         onSubmit={(e) => handleSubmit(e)}
         className='login-container__form-control'
       >
-        <label htmlFor='login-email'>Email:</label> <br />
+        <label htmlFor='email'>Email:</label> <br />
         <input
           type='text'
           name='email'
@@ -37,7 +37,7 @@ export default function Login() {
         />
         <br />
         <br />
-        <label htmlFor='login-password'>Password:</label> <br />
+        <label htmlFor='password'>Password:</label> <br />
         <input
           type='password'
           name='password'

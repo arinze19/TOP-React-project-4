@@ -31,7 +31,7 @@ export default function SignUp() {
         onSubmit={(e) => handleSubmit(e)}
         className='sign-up-container__form-control'
       >
-        <label htmlFor='sign-up-email'>Email:</label> <br />
+        <label htmlFor='email'>Email:</label> <br />
         <input
           type='text'
           name='email'
@@ -42,7 +42,7 @@ export default function SignUp() {
         />
         <br />
         <br />
-        <label htmlFor='sign-up-name'>Name:</label> <br />
+        <label htmlFor='name'>Name:</label> <br />
         <input
           type='text'
           name='name'
@@ -53,7 +53,7 @@ export default function SignUp() {
         />
         <br />
         <br />
-        <label htmlFor='sign-up-password'>Password:</label> <br />
+        <label htmlFor='password'>Password:</label> <br />
         <input
           type='password'
           autoComplete='off'

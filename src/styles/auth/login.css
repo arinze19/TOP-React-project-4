@@ -8,10 +8,6 @@
   margin-bottom: 10px;
 }
 
-.login-container__form-control label {
-  font-size: 23px;
-}
-
 .login-container__form-control input {
   border: 1px solid #1a12127e;
   padding: 15px;
@@ -33,7 +29,9 @@
   .login-container {
     width: 100%;
     padding: 0;
+    margin-bottom: 3rem;
   }
+
   .login-container__form-control input {
     width: 100%;
   }
