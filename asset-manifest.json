@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/TOP-React-project-4/static/css/main.8d097c2f.css",
-    "main.js": "/TOP-React-project-4/static/js/main.170e527e.js",
+    "main.css": "/TOP-React-project-4/static/css/main.2de33ff7.css",
+    "main.js": "/TOP-React-project-4/static/js/main.fd253638.js",
     "static/media/flutterwave.svg": "/TOP-React-project-4/static/media/flutterwave.29bac33ee350986cb4d10cda124fd3cf.svg",
     "static/media/abeg.svg": "/TOP-React-project-4/static/media/abeg.89c861d04f812863ca9a1619b8478932.svg",
     "static/media/paystack.svg": "/TOP-React-project-4/static/media/paystack.c0b774fea5617c1e5704083dc61d28a6.svg",
     "index.html": "/TOP-React-project-4/index.html",
-    "main.8d097c2f.css.map": "/TOP-React-project-4/static/css/main.8d097c2f.css.map",
-    "main.170e527e.js.map": "/TOP-React-project-4/static/js/main.170e527e.js.map"
+    "main.2de33ff7.css.map": "/TOP-React-project-4/static/css/main.2de33ff7.css.map",
+    "main.fd253638.js.map": "/TOP-React-project-4/static/js/main.fd253638.js.map"
   },
   "entrypoints": [
-    "static/css/main.8d097c2f.css",
-    "static/js/main.170e527e.js"
+    "static/css/main.2de33ff7.css",
+    "static/js/main.fd253638.js"
   ]
 }
