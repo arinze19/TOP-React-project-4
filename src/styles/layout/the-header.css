@@ -32,7 +32,7 @@
   cursor: pointer;
 }
 
-.header-container__cart.hide {
+.header-container__cart.hide-cart {
   visibility: hidden;
   pointer-events: none;
 }

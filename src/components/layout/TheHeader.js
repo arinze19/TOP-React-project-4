@@ -43,7 +43,7 @@ function TheHeader() {
       </div>
 
       <div
-        className={`header-container__cart ${location.pathname === '/checkout' ? 'hide' : null}`}
+        className={`header-container__cart ${location.pathname === '/checkout' ? 'hide-cart' : null}`}
         onClick={() => dispatch({ type: 'TOGGLE_CART' })}
       >
         <p>Cart({cart.length})</p>
