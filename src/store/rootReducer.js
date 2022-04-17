@@ -1,4 +1,4 @@
-import { toggleCart, addToCart, removeFromCart, modifyCartItemQty } from './reducers/cart';
+import { toggleCart, addToCart, removeFromCart, modifyCartItemQty, applyGiftCard } from './reducers/cart';
 import { setNotification, setLoading } from './reducers/notification';
 import { loadAllProducts } from './reducers/product';
 import { signIn, signUp, logOut } from './reducers/auth';
@@ -16,13 +16,15 @@ const initialState = {
     signUp: false,
     signIn: false,
     newsLetter: false,
-    products: true
+    products: false,
+    giftCard: false
   },
   notification: {
     isActive: false,
     status: 'success',
     message: ''
-  }
+  },
+  giftCard: {}
 };
 
 export default function reducers(state = initialState, { type, payload }) {
@@ -47,16 +49,9 @@ export default function reducers(state = initialState, { type, payload }) {
       return logOut(state, payload);
     case 'SET_LOADING':
       return setLoading(state, payload);
+    case 'APPLY_GIFT_CARD':
+      return applyGiftCard(state, payload)
     default:
       return state;
   }
 }
-
-// ============= thunk functions
-// export async function fetchProducts(dispatch, getState) {
-//   const response = await fetch(
-//     'https://react-project-4-api.herokuapp.com/api/v1/products'
-//   );
-//   const { data } = await response.json();
-//   dispatch({ type: 'LOAD_ALL_PRODUCTS', payload: data.products });
-// }

@@ -75,3 +75,15 @@ ul {
     transform: rotate(360deg);
   }
 }
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}

@@ -65,6 +65,8 @@ export const addToCart = (state, product) => {
       deliveryFee: priceHelper.deliveryFee(newCart),
     };
   };
+
+  export const applyGiftCard = (state, payload) => ({ ...state, giftCard: payload })
   
   // ======================================  helper functions
   const priceHelper = {
@@ -74,7 +76,7 @@ export const addToCart = (state, product) => {
       }, 0);
     },
     deliveryFee(cart) {
-      let deliveryFee = (this.totalPrice(cart) * 0.03).toFixed(2);
+      let deliveryFee = Number((this.totalPrice(cart) * 0.03).toFixed(2));
   
       if (this.totalPrice(cart) >= 200) {
         deliveryFee = 0;
