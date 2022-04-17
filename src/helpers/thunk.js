@@ -100,7 +100,7 @@ export function verifyGiftCard(pin) {
       const { booking } = response.data.data;
 
       dispatch(applyGiftCard(booking))
-      dispatch(notification.create('success', `gift card ${booking.pin} with ${booking.discount * 100}% discount has been applied to your cart`));
+      dispatch(notification.create('success', `gift card ${booking.pin} with ${booking.discount}% discount has been applied to your cart`));
       setTimeout(() => dispatch(notification.reset()), 4000);
     } catch (err) {
       const message = err.response.data.message || 'Sorry, something went wrong please try again later'

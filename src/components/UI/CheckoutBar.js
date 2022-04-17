@@ -72,7 +72,7 @@ function CheckoutBar() {
                         <p>Subtotal</p>
                         <div>
                             <p className={giftCard.discount ? 'strikethrough' : ''}>${(totalPrice + deliveryFee).toFixed(2)}</p>
-                            <p className={giftCard.discount ? 'show' : 'hide'}>${((totalPrice + deliveryFee) - ((totalPrice + deliveryFee) * giftCard.discount)).toFixed(2)}</p>
+                            <p className={giftCard.discount ? 'show' : 'hide'}>${((totalPrice + deliveryFee) - ((totalPrice + deliveryFee) * (giftCard.discount / 100))).toFixed(2)}</p>
                         </div>
                     </section>
                 </div>
