@@ -62,6 +62,7 @@
 
   .homepage-container__showcase-slider {
     overflow-x: scroll;
+    scroll-snap-type: x mandatory;
     justify-content: flex-start;
   }
 
@@ -72,5 +73,6 @@
 
   .slider-item {
     width: 80%;
+    scroll-snap-align: start;
   }
 }
