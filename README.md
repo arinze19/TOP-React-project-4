@@ -24,6 +24,7 @@ Environmental variables required for this project can be found in `.example.env`
 5. Add E-mail support for confirmation of sign up, forgotten password, order details and newsletter
 6. Add checkout process (Test)
 7. Add responsiveness
+8. Add discount code functionality
 
 ## Live Preview 
 A live preview of this project can be found [Here](https://arinze19.github.io/TOP-React-project-4/)
