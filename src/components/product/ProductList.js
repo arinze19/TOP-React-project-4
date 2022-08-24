@@ -1,9 +1,7 @@
 import ProductItem from './ProductItem';
-import { useSelector } from 'react-redux';
 import '../../styles/product/product-list.css';
 
-function ProductList() {
-  const { products } = useSelector((state) => state);
+function ProductList({ products }) {
   return products.map((product) => <ProductItem product={product} key={product.id} />);
 }
 

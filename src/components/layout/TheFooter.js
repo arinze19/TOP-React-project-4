@@ -1,35 +1,48 @@
 import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { subscribeToNewsletter } from '../../helpers/thunk';
+import axios from 'axios';
+import toast, { Toaster } from 'react-hot-toast';
 import '../../styles/layout/the-footer.css';
 
 export default function TheFooter() {
-  const { loading } = useSelector(state => state);
-  const dispatch = useDispatch();
   const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setEmail(e.target.value);
   }
 
-  const handleSubmit = (e) => {
-    if (!email) return 
-    
-    setEmail('');
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    dispatch(subscribeToNewsletter(email))
+    if (!email) return 
+
+    setLoading(true);
+  
+      try {
+        const response = await axios.post('/newsletter/subscribe', { email });
+        const { message } = response.data;
+
+        toast.success(message, { duration: 4000, position: 'bottom-center' })
+      } catch (err) {
+        const message = err.response.data.message || 'Sorry, something went wrong please try again later'
+        toast.error(message, { duration: 4000, position: 'bottom-center' })
+      } finally {
+        setEmail('');
+        setLoading(false);
+      }
   }
 
   return (
     <div className='footer-container'>
+      <Toaster />
+
       <main>
         <div className='form'>
           <p>be the first to know when we have cool stuff</p>
           <form onSubmit={(e) => handleSubmit(e)}>
             <input type='email' value={email} onChange={(e) => handleChange(e)} />
           </form>
-          <button className="btn" type="submit" onClick={(e) => handleSubmit(e)} disabled={loading.newsLetter}>
-             Let's go <i className={`${loading.newsLetter ? 'las la-atom spinner' : 'lab la-telegram-plane'}`}></i>
+          <button className="btn" type="submit" onClick={(e) => handleSubmit(e)} disabled={loading}>
+             Let's go <i className={`${loading ? 'las la-atom spinner' : 'lab la-telegram-plane'}`}></i>
           </button>
         </div>
         <div className='footer-grid'>

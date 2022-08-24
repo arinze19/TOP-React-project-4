@@ -1,22 +1,50 @@
-import ProductImages      from "../components/product/ProductImages";
-import ProductDescription from "../components/product/ProductDescription";
-import ReviewList from "../components/reviews/ReviewList";
-import "../styles/pages/product-page.css";
-import { useSelector } from 'react-redux';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import ProductImages from '../components/product/ProductImages';
+import ProductDescription from '../components/product/ProductDescription';
+import ReviewList from '../components/reviews/ReviewList';
+import '../styles/pages/product-page.css';
 
 function ProductPage({ match }) {
-  const { products } = useSelector(store => store);
-  const id       = match.params.productId;
-  const product  = products.find(prod => prod.id === id)
-  document.title = `Collection | ${product.name}`
+  const [loading, setLoading] = useState(false);
+  const [product, setProduct] = useState({ comments: [], imagesUrl: [], availableSizes: [] });
+  document.title = `Collection | ${product.name}`;
+
+
+  const fetchProduct = async () => {
+    setLoading(true);
+    const id = match.params.productId;
+
+    try {
+      const { data } = await axios.get(`/product/${id}`);
+      setProduct(data.data.product);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchProduct();
+  }, []);
+
 
   return (
-    <div className="product-page-container">
-      <div className="project-page-container__info">
-        <ProductImages images={product.imagesUrl} />
-        <ProductDescription product={product} />
-      </div>
-      <ReviewList comments={product.comments} />
+    <div className='product-page-container'>
+      {loading ? (
+        <div className='spinner-div'>
+          <i className='spinner spinner-md las la-atom'></i>
+        </div>
+      ) : (
+        <>
+          <div className='project-page-container__info'>
+            <ProductImages images={product.imagesUrl} />
+            <ProductDescription product={product} />
+          </div>
+          <ReviewList comments={product.comments} />
+        </>
+      )}
     </div>
   );
 }

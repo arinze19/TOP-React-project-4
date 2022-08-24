@@ -4,7 +4,6 @@ import { loadAllProducts } from './reducers/product';
 import { signIn, signUp, logOut } from './reducers/auth';
 
 const initialState = {
-  products: [],
   cart: [],
   user: {},
   token: null,
@@ -16,7 +15,6 @@ const initialState = {
     signUp: false,
     signIn: false,
     newsLetter: false,
-    products: false,
     giftCard: false
   },
   notification: {
