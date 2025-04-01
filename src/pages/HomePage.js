@@ -41,7 +41,7 @@ function homePage() {
         <h1>Shop the collection</h1>
         <div className="homepage-container__showcase-slider">
           <div className="slider-item">
-            <img src="https://cutt.ly/qc58vSp" alt="model 001" loading="lazy"/>
+            <img src="https://tinyurl.com/52a3kxs6" alt="model 001" loading="lazy"/>
             <h3> Model #001</h3>
             <p>Crafted from wool to provide complete comfort for the heel.</p>
             <Link to="/products">
@@ -50,7 +50,7 @@ function homePage() {
           </div>
 
           <div className="slider-item">
-            <img src="https://cutt.ly/zc58Yn1" alt="model 002" loading="lazy"/>
+            <img src="https://tinyurl.com/38hsces4" alt="model 002" loading="lazy"/>
             <h3> Model #002</h3>
             <p>Cotton based sole to ease stress on walking.</p>
             <Link to="/products">
@@ -59,7 +59,7 @@ function homePage() {
           </div>
 
           <div className="slider-item">
-            <img src="https://cutt.ly/Dc58G5e" alt="model 003" loading="lazy"/>
+            <img src="https://tinyurl.com/3fsudmth" alt="model 003" loading="lazy"/>
             <h3> Model #003</h3>
             <p>Fine tuned sneaker perfect for summer.</p>
             <Link to="/products">
