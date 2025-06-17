@@ -41,7 +41,7 @@ function homePage() {
         <h1>Shop the collection</h1>
         <div className="homepage-container__showcase-slider">
           <div className="slider-item">
-            <img src="https://tinyurl.com/52a3kxs6" alt="model 001" loading="lazy"/>
+            <img src="https://res.cloudinary.com/arinzeobi/image/upload/v1750189069/react-project-4/model-001-1_dlaes9.avif" alt="model 001" loading="lazy"/>
             <h3> Model #001</h3>
             <p>Crafted from wool to provide complete comfort for the heel.</p>
             <Link to="/products">
@@ -50,18 +50,9 @@ function homePage() {
           </div>
 
           <div className="slider-item">
-            <img src="https://tinyurl.com/38hsces4" alt="model 002" loading="lazy"/>
+            <img src="https://res.cloudinary.com/arinzeobi/image/upload/v1750189250/react-project-4/model-002-3_zr1wqn.avif" alt="model 002" loading="lazy"/>
             <h3> Model #002</h3>
             <p>Cotton based sole to ease stress on walking.</p>
-            <Link to="/products">
-              <button className="btn">Shop Now</button>
-            </Link>
-          </div>
-
-          <div className="slider-item">
-            <img src="https://tinyurl.com/3fsudmth" alt="model 003" loading="lazy"/>
-            <h3> Model #003</h3>
-            <p>Fine tuned sneaker perfect for summer.</p>
             <Link to="/products">
               <button className="btn">Shop Now</button>
             </Link>
